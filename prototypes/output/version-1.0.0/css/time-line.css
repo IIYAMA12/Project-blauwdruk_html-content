@@ -1,0 +1,123 @@
+#time-line::before {
+  content: "";
+  border-left: 0.5rem solid white;
+  position: absolute;
+  top: 0;
+  left: 4rem;
+  height: 150vh;
+}
+
+
+
+
+
+#time-line > header {
+  padding: 1rem 1rem 1rem 1rem;
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  z-index: 1;
+}
+
+.time-line-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 5rem auto 15rem;
+  margin-bottom: 1rem;
+  transition: order 0.5s ease 0s;
+  width: 100%;
+}
+
+.time-line-item__article {
+  background-color: white;
+  transition: color 0.3s, background-color 0.3s;
+  color: black;
+  position: relative;
+}
+
+.time-line-item__article .padding-box {
+  display: grid;
+  grid-template-columns: auto 12rem;
+  grid-template-columns: auto max-content;
+  column-gap: 2rem;
+}
+
+
+.time-line-item__date-year {
+  background-color: black;
+  display: block;
+  height: 2rem;
+  color: white;
+  line-height: 2rem;
+  text-align: center;
+  padding-right: 1rem;
+}
+
+.time-line-item__arrow {
+  position: absolute;
+  right: 100%;
+  right: calc(100% - 0.1px);
+  height: 2rem;
+  top: 0;
+}
+
+
+
+.time-line-item__full-date {
+  min-height: 2rem;
+  line-height: 2rem;
+  padding-left: 1rem;
+}
+
+
+.connector, .connector .inner {
+  border-radius: 100%;
+
+}
+.connector {
+  width: 2rem;
+  height: 2rem;
+  background-color: #E3E6E8;
+  position: absolute;
+  right: -1rem;
+  top: 50%;
+  top: calc(50% - 1rem);
+  padding: 0.666rem;
+  box-sizing: border-box;
+}
+
+.connector .inner {
+  width: 0.666rem;
+  height: 0.666rem;
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.time-line-item-list {
+  height: 100vmin;
+  min-height: 20rem;
+  overflow-y: scroll;
+  position: relative;
+  padding-top: 6rem;
+  display: grid;  
+  grid-template-rows: auto;
+}
+
+.connected-content {
+  padding: 0 1rem 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, 2.5rem);
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.time-line-item__article.scroll-to-element-highlight {
+  color: white;
+  background-color: #DD3230;
+}
+
+
+.time-line-item__article.scroll-to-element-highlight .inner {
+  background-color: #DD3230;
+}

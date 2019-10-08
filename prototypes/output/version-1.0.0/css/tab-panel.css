@@ -1,0 +1,38 @@
+
+
+.tab-panel {
+  display: flex;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+  position: relative;
+}
+
+.tab-panel label {
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  transition: border-color 0.3s, color 0.3s;
+  border-bottom: 2px solid rgba(0,0,0,0);
+}
+
+.tab-panel .flex {
+  margin: 0px auto;
+  display: inline-block;
+}
+
+.tab-panel input:checked + label  {
+  color: #DD3230;
+  border-bottom: 2px solid #DD3230;
+}
+
+
+
+.tab {
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-panel-container {
+  overflow: hidden;
+}

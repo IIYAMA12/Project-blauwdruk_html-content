@@ -1,0 +1,212 @@
+#connections-graph-container svg {
+  width: 100%;
+  transition: opacity 0.3s;
+}
+
+#connections-graph-container.loading svg {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#connections-graph-container.loading {
+  background-image: url("../assets/loader.gif");
+  background-position: 50% 50%;
+  background-size: 4rem;
+  background-repeat: no-repeat;
+}
+
+#connections-graph-container svg text {
+  /* pointer-events: none; */
+}
+ 
+
+
+.svg-name-label, .svg-type-label {
+  text-anchor: middle;
+}
+
+.svg-name-label {
+  font-weight: bold;
+  font-size: 1rem;
+  transform: rotate(0deg);
+  transition: transform 0.6s;
+  filter: drop-shadow(rgb(227, 230, 232) -1px -1px 1px);
+}
+
+#connections-graph-container.timeview .svg-name-label {
+  transform: rotate(-40deg)!important;
+}
+
+.event-nodes circle {
+  transition: r 0.6s;
+}
+
+
+#connections-graph-container.timeview .event-nodes circle {
+  r: 0.5rem!important;
+  stroke: #E3E6E8;
+  stroke-width: 5;
+}
+
+.svg-type-label {
+  fill: #666666;
+  opacity: 0;
+  font-size: 0.875rem;
+  pointer-events: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  transition: x 0.6s, y 0.6s;
+}
+
+path.line-effect {
+  stroke-width: 1px;
+  stroke: #000;
+  pointer-events: none;
+  marker-end: url("#svgheadarrow");
+  transition: x1 0.6s, y1 0.6s, x2 0.6s, y2 0.6s;
+}
+
+path.bounding-box-line {
+  stroke-width: 2rem;
+  stroke: rgba(218, 128, 128, 0);
+  cursor: pointer;
+  transition: x1 0.6s, y1 0.6s, x2 0.6s, y2 0.6s;
+}
+
+path.bounding-box-line:hover + path.line-effect, path.bounding-box-line.active-element + path.line-effect {
+  stroke: #DD3230;
+  stroke-width: 3px;
+  marker-end: url("#svgheadarrow-hover");
+}
+
+path.line-effect, path.bounding-box-line {
+  fill: none;
+}
+
+@-webkit-keyframes move-line-effect {
+  from {stroke-dashoffset: 0;}
+  to {stroke-dashoffset: 1000px;}
+}
+
+
+
+
+
+#connections-graph-container.timeview path.line-effect {
+  marker-end: unset!important;
+  stroke-dasharray: 5;
+}
+
+#connections-graph-container.timeview path.bounding-box-line:hover + path.line-effect, #connections-graph-container.timeview path.bounding-box-line.active-element + path.line-effect {
+  stroke-dashoffset: 0;
+  animation: move-line-effect 240s infinite;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+}
+
+
+.connection-details {
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+  display: grid;
+  grid-template-columns: auto max-content;
+  column-gap: 2rem;
+}
+
+.event-nodes {
+  cursor: pointer;
+}
+
+.event-nodes circle {
+  transition: cx 0.6s, cy 0.6s;
+}
+
+
+
+.event-nodes:hover, .event-nodes.active-element  {
+  fill: #DD3230 !important;
+}
+
+.event-nodes:hover .time-bind-line, .event-nodes.active-element .time-bind-line  {
+  stroke:  #DD3230 !important;
+  marker-end: url("#svgheadarrow-hover");
+}
+
+
+
+.connection-details__description {
+  /* columns: 2;
+  column-gap: 4rem;
+  column-fill: auto; */
+  max-height: 6rem;
+  overflow-y: scroll;
+  margin-bottom: 1rem;
+}
+
+.connections-header {
+  position: relative;
+}
+
+.connections-view-mode {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 1;
+}
+
+.connections-web-heading {
+  padding: 1rem;
+  margin: 0;
+}
+
+.connections-web-paragraph {
+  padding: 0 1rem;
+  display: inline-block;
+
+  border-radius: 5px;
+
+  max-width: 30rem;
+}
+
+.time-line-axis text {
+  fill: black;
+  font-size: 1.125rem;
+}
+
+.time-line-axis line, .time-line-axis path {
+  stroke: white;
+  stroke-width: 2;
+}
+
+.time-line-axis, .time-bind-line {
+  display: none;
+}
+
+.timeview .time-line-axis, .timeview .time-bind-line {
+  display: inline;
+}
+
+.time-bind-line {
+  stroke: white;
+  stroke-width: 2;
+  marker-end: url("#svgheadarrow-white");
+}
+
+
+.event-nodes .show-date {
+  display: none;
+}
+
+.timeview .event-nodes:hover .show-date  {
+  display: inline;
+}
+
+.event-nodes .show-date .date-background {
+  fill: #DD3230;
+}
+
+.event-nodes .show-date .date-text {
+  fill: white;
+  text-anchor: middle;
+}

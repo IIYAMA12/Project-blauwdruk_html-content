@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/tab-panel.css">
+    <link rel="stylesheet" type="text/css" href="css/connections.css">
+    <link rel="stylesheet" type="text/css" href="css/source-list.css">
+    <link rel="stylesheet" type="text/css" href="css/document-list.css">
+    <link rel="stylesheet" type="text/css" href="css/connected-content-button.css">
+    <link rel="stylesheet" type="text/css" href="css/time-line.css">
+    <link rel="stylesheet" type="text/css" href="css/dialog.css">
+    <link rel="stylesheet" type="text/css" href="css/research-questions.css">
+    <link rel="stylesheet" type="text/css" href="css/scroll-box.css">
+    <link rel="stylesheet" type="text/css" href="css/show-more.css">
+  </head>
+  <body>
+  <article id="image-dialog" class="hidden">
+    <button id="close-image-dialog" class="close-dialog" type="button"><span class="screen-reader">Sluit afbeelding overlay</span><span aria-hidden="true">X</span></button>
+    <figure>
+      <img src="assets/documents/jaarverslag-2019/jaarverslag-2019.png" alt="">
+      <figcaption>screenshot.png</figcaption>
+    </figure>
+  </article>
+  <div id="dialog-wrapper" class="dialog-container hidden">
+      <dialog open>
+        <button id="close-dialog" class="close-dialog" type="button"><span class="screen-reader">Sluit overlay</span><span aria-hidden="true">X</span></button>
+        <div class="dialog-layout hidden" id="source-dialog">
+          <header class="dialog-header">
+            <h2><span>Bron: </span><span></span></h2>
+          </header>
+          <div class="main-content">
+            <section class="properties">
+              <div class="padding-box">
+                <!-- <h2>Eigenschappen:</h2> -->
+                <div class="properties-container">
+                  <!-- <p class="p-label">Naam:</p>
+                  <p>Jan</p>
+
+                  <p class="p-label">Email:</p>
+                  <p>jan@gmail.com</p>
+
+                  <p class="p-label">Telefoonnummer:</p>
+                  <p>06 20172810</p> -->
+                </div>
+              </div>
+              <footer class="padding-box">
+                <h3>FTM netwerkdatabase</h3>
+                <a target="_blank" href="https://www.ftm.nl/tag/zorg">www.ftm.nl/tag/jan-van-doen</a>
+              </footer>
+            </section>
+         
+            <section class="references">
+              <div class="padding-box">
+                <div class="events">
+                  <p>Is betrokken geweest in deze gebeurtenissen:</p>
+                  <ul>
+                    <!-- <li><button class="reference-button" type="button">Faillissement bv. Zorggeld eters</button></li> -->
+                    <!-- <li><button class="reference-button" type="button">Ontslag medewerkers</button></li> -->
+                  </ul>
+                </div>
+                <div class="connections">
+                  <p>Komt voor in deze verbanden web:</p>
+                  <ul>
+                    <!-- <li><button class="reference-button" type="button">Ontstaan nieuwe stichting</button></li> -->
+                  </ul>
+                </div>
+                <div class="research-questions">
+                  <p>Heeft bijgedragen aan het beantwoorden van deze onderzoeksvragen:</p>
+                  <ul>
+                    <!-- <li><button class="reference-button" type="button">Waarom is de omzet van zorggeld eters veelmaler hoger dan de gemiddelde zorgleveraar?</button></li> -->
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="dialog-layout hidden" id="document-dialog">
+          <header class="dialog-header">
+            <h2><span>Document: </span><span></span></h2>
+          </header>
+          <div class="main-content">
+            <section class="properties">
+              <div class="padding-box">
+                <!-- <h2>Eigenschappen:</h2> -->
+                <div class="properties-container">
+                  <!-- <p class="p-label">Naam:</p>
+                  <p>Jan</p>
+
+                  <p class="p-label">Email:</p>
+                  <p>jan@gmail.com</p>
+
+                  <p class="p-label">Telefoonnummer:</p>
+                  <p>06 20172810</p> -->
+                </div>
+              </div>
+            </section>
+         
+            <section class="references">
+              <div class="padding-box">
+                <div class="screenshots">
+                    <p>Screenshots:</p>
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="events">
+                  <p>Heeft betrekking op deze gebeurtenissen:</p>
+                  <ul>
+                    <!-- <li><button class="reference-button" type="button">Faillissement bv. Zorggeld eters</button></li>
+                    <li><button class="reference-button" type="button">Ontslag medewerkers</button></li> -->
+                  </ul>
+                </div>
+                <div class="connections">
+                  <p>Komt voor in deze verbanden web:</p>
+                  <ul>
+                    <!-- <li><button class="reference-button" type="button">Ontstaan nieuwe stichting</button></li> -->
+                  </ul>
+                </div>
+                <div class="research-questions">
+                  <p>Heeft bijgedragen aan het beantwoorden van deze onderzoeksvragen:</p>
+                  <ul>
+                    <!-- <li><button class="reference-button" type="button">Waarom is de omzet van zorggeld eters veelmaler hoger dan de gemiddelde zorgleveraar?</button></li> -->
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </dialog>
+
+    </div>
+
+    <header class="show-more-container">
+      <!-- <h1>Project blauwdruk</h1> -->
+      <h2>Voorblad onderzoek</h2>
+      <div class="flex info-blocks">
+        <section>
+          <p class="p-label">Naam onderzoek:</p>
+          <p>Hongerige 'Zorggeld-eters'</p>
+        </section>
+        <section>
+          <p class="p-label">Hypothese:</p>
+          <p>De omzet van BV 'Zorggeld-eters' is rekenkundig onmogelijk te behalen met het aantal in dienst genomen personeel, hier gaat waarschijnlijk iets niet helemaal goed.</p>
+        </section>
+        <section>
+          <p class="p-label">Eigenaar:</p>
+          <p>Mara</p>
+        </section>
+        <section>
+          <p class="p-label">Korte omschrijving onderzoek:</p>
+          <p>Dit onderzoek is opgezet om na te gaan of het bedrijf 'Zorggeld-eters' wel alles volgens de wet heeft 'gedineerd'.</p>
+        </section>
+
+ 
+        <section>
+          <p class="p-label">Startdatum:</p>
+          <p>11-04-2019</p>
+        </section>   
+        <section>
+          <p class="p-label">Publicatiedatum:</p>
+          <p>6-07-2019</p>
+        </section>
+        <section class="show-more-content">
+          <p class="p-label">Verhaalvormen die voor het onderzoek lenen:</p>
+          <p>Artikel, interview</p>
+        </section>
+        <section class="show-more-content">
+          <p class="p-label">Deze personen hebben bijgedragen aan het onderzoek:</p>
+          <p>Monica Jansen, Pieter Jansen</p>
+        </section>  
+        <section class="show-more-content">
+          <p class="p-label">Relevantie onderzoek:</p>
+          <p>Zorggeld moet niet gebruikt worden voor andere dingen dan zorg. Het is van algemeen belang dat hier goed mee omgegaan wordt.</p>
+        </section>
+      </div>
+      <button class="show-more-button" type="button"><span class="options"><span class="show-more">Toon meer</span><span class="show-less">Toon minder</span></span><div class="button-icon"></div></button>
+    </header>
+    
+    <main>
+      <section class="grid grid-2-column-auto">
+        <artikel>
+          <h2>Bronnen</h2>
+          <ul id="sources-container" class="source-list dia-section">
+            <!-- <li>
+              <a class="open-dialog" href="#">
+                <figure>
+                  <img src="assets/bron.svg" alt="Jan van Doen">
+                  <figcaption>Albert van Dijk</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a class="open-dialog" href="#">
+                <figure>
+                  <img src="assets/bron.svg" alt="Anoniem - 35365">
+                  <figcaption>Anoniem - 35365</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+                <a class="open-dialog" href="#">
+                  <figure>
+                    <img src="assets/bron.svg" alt="Jaap van Dijk">
+                    <figcaption>Jaap van Dijk</figcaption>
+                  </figure>
+                </a>
+              </li>
+            <li>
+              <a class="open-dialog" href="#">
+                <figure>
+                  <img src="assets/bron.svg" alt="Jan van Doen">
+                  <figcaption>Jan van Doen</figcaption>
+                </figure>
+              </a>
+            </li> -->
+          </ul>
+        </artikel>
+        <artikel>
+          <h2>Documenten</h2>
+          <ul id="document-container" class="document-list dia-section">
+
+              <!-- <li>
+                <a class="open-dialog" href="#">
+                  <figure>
+                    <img src="assets/document.svg" alt="Jaar verslag zorg 20-06-2018">
+                    <p class="format">PDF</p>
+                    <figcaption>Jaarverslag zorg 20-06-2018</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a class="open-dialog" href="#">
+                  <figure>
+                    <img src="assets/document.svg" alt="Jaar verslag zorg 20-06-2019">
+                    <p class="format">PDF</p>
+                    <figcaption>Jaarverslag zorg 20-06-2019</figcaption>
+                  </figure>
+                </a>
+              </li> -->
+          </ul>
+        </artikel>
+      </section>
+      <hr>
+      <section>
+        
+        <form id="tab-panel-main-content" class="tab-panel" autocomplete="off">
+          <div class="flex">
+            <input class="screen-reader" id="tab-timeline" value="0" type="radio" checked name="tabs-main-content">
+            <label for="tab-timeline">Tijdlijn</label>
+            <input class="screen-reader" id="tab-connections" value="1" type="radio" name="tabs-main-content">
+            <label for="tab-connections">Verbanden</label>
+            <input class="screen-reader" id="tab-research-questions" value="2" type="radio" name="tabs-main-content">
+            <label for="tab-research-questions">Onderzoeksvragen</label>
+          </div>
+        </form>
+        <div class="tab-panel-container dia-section dia-section-no-padding" tab-panel="tab-panel-main-content">
+          <div class="overflow-hidden">
+          <artikel id="time-line" class="tab">
+            <header>
+              <h2 class="screen-reader">Tijdlijn</h2>
+              <div class="select-wrapper"> 
+                  <label class="screen-reader" for="order-timeline">Orden tijdlijn</label>
+                  <select autocomplete="off" id="order-timeline">
+                    <option selected="selected" value="0">Oudste > nieuwste</option>
+                    <option value="1">Nieuwste > oudste</option>
+                  </select>
+              </div>
+
+            </header>
+            <ul id="event-list" class="time-line-item-list">
+              <!-- <li class="time-line-item">
+                <p class="time-line-item__date-year">2018</p>
+                <article class="time-line-item__article">
+                  <img class="time-line-item__arrow" alt="" aria-hidden="true" src="assets/tijd-line-pijl.svg">
+                  <p class="time-line-item__full-date">Datum: 01-01-2018</p>
+                  <div class="padding-box">
+                    <div>
+                      <h3>Faillissement bv. Zorggeld eters</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in dolor in aliquam</p>
+                    </div>
+                    <section class="connected-content">
+                      <div class="connected-content-button-wrapper close">
+                        <button class="connected-content-button source" type="button"><span class="screen-reader">Bronnen</span><span>2x</span></button>
+                        <ul>
+                          <li>
+                            <button class="open-dialog" type="button">Jan van Doen</button>
+                          </li>
+                          <li>
+                            <button class="open-dialog" type="button">John Rozen</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <button class="open-dialog connected-content-button doc" type="button"><span class="screen-reader">Documenten</span><span>3x</span></button>
+                    </section>
+                  </div>
+                  <div class="connector">
+                      <div class="inner">
+                      </div>
+                  </div>
+                </article>
+              </li> -->
+            </ul>
+          </artikel>
+          </div>
+          <artikel class="tab invisible">
+            <header class="connections-header">
+              <h2 class="screen-reader">Verbanden</h2>
+              <h3 class="connections-web-heading">Aanleiding annulering zorgproduct</h3>
+              <p class="connections-web-paragraph">Dit verband legt uit wat de achterliggende redenen zijn voor het annuleren van een zorgproduct.</p>
+              <div class="select-wrapper connections-view-mode"> 
+                <label class="screen-reader" for="graph-view-mode">Grafiek weergave</label>
+                <select autocomplete="off" id="graph-view-mode">
+                  <option selected="selected" value="time">Weergave: Tijd</option>
+                  <option value="spin">Weergave: Spin</option>
+                </select>
+              </div>
+            </header>
+            <section>
+              <div id="connections-graph-container" class="loading"></div>
+              
+              
+              <div class="padding-box">
+                <div class="connection-details hidden padding-box">
+                  <div>
+                    <h3 class="connection-details__header"></h3>
+                    <p class="connection-details__description">
+                    </p>
+                    <div class="connection-details__to-info-container hidden">
+                      <button type="button" class="connection-details__to-info ftm-button ftm-button-invert"></button>
+                    </div>
+                  </div>
+                  <section class="connected-content">
+
+                  </section>
+                </div>
+              </div>
+              <hr>
+            </section>
+          </artikel>
+          <artikel class="tab invisible">
+            <h2 class="screen-reader">Onderzoeksvragen</h2>
+           
+            
+            <!-- <img style="margin: auto; display: block; width: 100%" width="500" src="assets/preview-research-questions.png"> -->
+            <ul id="research-question-list" class="padding-box">
+              <!-- <li class="research-question-item">
+                <article class="research-question-main-article">
+                  <div class="research-question-question-answer-wrapper">
+                    <article>
+                      <h3>
+                        Vraag
+                      </h3>
+                      <p>Waarom is de omzet van zorggeld eters veelmaler hoger dan de gemiddelde zorgleveraar?</p>
+                      <div class="connected-content">
+                        <div class="connected-content-button-wrapper close"><button type="button" class="connected-content-button source"><span></span><span>3x</span></button><ul><li><button class="open-dialog" type="button">Jan van Doen</button></li><li><button class="open-dialog" type="button">Zachary Brinks</button></li><li><button class="open-dialog" type="button">Jaap van Dijk</button></li></ul></div><div class="connected-content-button-wrapper close"><button type="button" class="connected-content-button doc"><span></span><span>1x</span></button><ul><li><button class="open-dialog" type="button">Jaarverslag zorg 20-06-2018</button></li></ul></div>
+                      </div>
+                    </article>
+                    <article>
+                        <h3>
+                          Antwoorden
+                        </h3>
+                        <div class="question-list-wrapper scroll-box-white">
+                          <ul class="question-list">
+                            <li class="question-list-item">
+                              <p>Hieruit is te concluderen dat de wet artikel 461 overtreden is door het management van Zorggeld eters.
+                              </p>
+                              <ul>
+                                <li>
+                                  <button class="tag" type="button">conclusie</button>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </article>
+                    </div>
+                    
+                    <footer class="research-question-question-footer">
+                        <article>
+                          <h3>
+                            Aanleiding
+                          </h3>
+                          <p>
+                              De omzet van zorggeld eters is rekenkundig onmogelijk te behalen met het aantal in dienst genomen personeel.
+                          </p>
+                        </article>
+                        <article>
+                          <h3>
+                            Doel
+                          </h3>
+                          <p>Achterhalen of zorggeld eters niet fraude pleegt.
+                            </p>
+                        </article>
+                    </footer>
+                </article>
+                <button class="research-question-question-show-more" type="button"><span class="options"><span class="show-more">Toon meer</span><span class="show-less">Toon minder</span></span><div class="button-icon"></div></button>
+              </li> -->
+            </ul>
+          </artikel>
+        </div>
+      </section>
+      <hr>
+    </main>
+    <script src="js/connected-content-button.js"></script>
+    <script src="js/renderConnectedButtons.js"></script>
+    <script src="js/d3/d3.js"></script>
+    <script src="js/dragable-image-dialog.js"></script>
+    <script src="js/utility.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/data-manager.js"></script>
+    <script src="js/data-element-bind.js"></script>
+    <script src="js/data-connections.js"></script>
+    <script src="js/tab-panel.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/template-engine.js"></script>
+    
+    <script src="js/connections.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/process-data.js"></script>
+    
+    <script src="js/research-questions.js"></script>
+    <script src="js/show-more.js"></script>
+    <script src="js/sort-items.js"></script>
+  </body>
+<html>

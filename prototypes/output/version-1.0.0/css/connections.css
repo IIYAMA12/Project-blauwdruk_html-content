@@ -1,0 +1,71 @@
+#connections-graph-container svg {
+  width: 100%;
+  transition: opacity 0.3s;
+}
+
+#connections-graph-container svg.loading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.svg-name-label, .svg-type-label {
+  text-anchor: middle;
+}
+
+.svg-name-label {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.svg-type-label {
+  fill: #666666;
+  opacity: 0;
+  font-size: 0.875rem;
+  pointer-events: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+line.line-effect {
+  stroke-width: 1px;
+  stroke: #000;
+  pointer-events: none;
+}
+
+line.bounding-box-line {
+  stroke-width: 2rem;
+  stroke: rgba(218, 128, 128, 0);
+  cursor: pointer;
+}
+
+line.bounding-box-line:hover + line.line-effect, line.bounding-box-line.active-element + line.line-effect {
+  stroke: #DD3230;
+  stroke-width: 3px;
+}
+
+
+
+.connection-details {
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+circle.event-nodes {
+  cursor: pointer;
+}
+
+
+
+circle.event-nodes:hover, circle.event-nodes.active-element  {
+  fill: #DD3230 !important;
+}
+
+.connection-details__description {
+  columns: 2;
+  column-gap: 4rem;
+  column-fill: auto;
+  max-height: 6rem;
+  overflow-y: scroll;
+}
