@@ -504,7 +504,7 @@ function renderConnectionGraph () {
         if (toInfoContainer != undefined) {
           toInfoContainer.classList.add("hidden");
         }
-
+        
         const connectedContent = connectionDetails.getElementsByClassName("connected-content")[0];
         if (connectedContent != undefined) {
           connectedContent.innerHTML = "";
@@ -515,7 +515,7 @@ function renderConnectionGraph () {
                 {
                   content: templatingConnectedButtons,
                   type: "function",
-                  data: {data: item, excluded:{events:true}}
+                  data: {data: item, excluded:{events:true}, baseGroup:"events"} // 
                 }
               
               ], connectedContent);
@@ -636,7 +636,9 @@ function renderConnectionGraph () {
                   toInfoContainer.classList.add("hidden");
                 }
               }
+             
               const connectedContent = connectionDetails.getElementsByClassName("connected-content")[0];
+              
               if (connectedContent != undefined) {
                 connectedContent.innerHTML = "";
                 templateEngine.render(
@@ -645,7 +647,7 @@ function renderConnectionGraph () {
                       {
                         content: templatingConnectedButtons,
                         type: "function",
-                        data: {data: item, excluded:{events:true}}
+                        data: {data: item, excluded:{events:true}, baseGroup:"events"}
                       }
                     
                     ], connectedContent);
