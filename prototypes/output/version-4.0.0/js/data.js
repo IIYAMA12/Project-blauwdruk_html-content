@@ -382,7 +382,7 @@ const dataBaseRaw = [
     items: [
       [
         {
-          key:"question", value: "Waarom is de omzet van 'Zorggeld-eters' veelmaler hoger dan de gemiddelde zorgleveraar?"
+          key:"question", value: "Waarom is de omzet van 'Zorggeld-eters' vele malen hoger dan de gemiddelde zorgleveraar?"
         },
         {
           key:"answers", value: 
