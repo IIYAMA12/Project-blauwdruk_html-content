@@ -1,0 +1,50 @@
+.document-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+}
+
+
+.document-list li {
+  font-size: 0.875rem;
+}
+
+.document-list a {
+  text-decoration: none;
+  color: black;
+}
+
+.document-list figure {
+  border: 1px solid white;
+  padding: 1rem;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 50px -21px rgba(0,0,0,0.20);
+}
+
+.document-list img {
+  background-color: white;
+  display: block;
+  max-width: 100%;
+}
+
+.document-list img.screenshot {
+  border-top: 1px solid #E3E6E8;
+  border-left: 1px solid #E3E6E8;
+  border-right: 1px solid #E3E6E8;
+  max-width: calc(100% - 2px);
+}
+
+.document-list .format {
+  background-color: black;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  padding: 0.2rem;
+}
+
+.document-list a:hover figure {
+  border: 1px solid black;
+}

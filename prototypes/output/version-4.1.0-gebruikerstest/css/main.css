@@ -1,0 +1,365 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+hr {
+  border-color: #E3E6E8;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  margin: 0;
+}
+
+body, select {
+  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex > * {
+  flex-grow: 1;
+}
+
+
+.grid {
+  display: grid;
+  grid-column-gap: 2rem;
+}
+
+.grid-2-column-auto {
+  grid-template-columns: 1fr 1fr;
+}
+
+body {
+  background: rgba(255,255,255,1) url(../assets/background2.svg) no-repeat;
+  background-size: cover;
+}
+
+
+body > header .info-blocks {
+  column-gap: 1rem;
+}
+
+body > header .info-blocks section {
+  width: 30rem;
+  /* max-width: calc(50% - 1rem); */
+  flex-grow: 1;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+
+  /* border-bottom: 1px solid #E3E6E8; */
+  
+  /* padding: 0 0.5rem 0.5rem 0; */
+}
+
+body > main, body > header {
+  max-width: 1400px;
+  margin: auto;
+}
+
+body > header {
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  box-sizing: border-box;
+  background-color: #E3E6E8;
+  box-shadow: 0px 0px 50px -21px rgba(0,0,0,0.20);
+}
+main {
+  background-color: white;
+  box-shadow: 0px 0px 50px -21px rgba(0,0,0,0.20);
+}
+
+main > section, main > article {
+  padding: 2.5rem;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h3 {
+  /* color: #666666;*/
+  margin-bottom: 0.25rem;
+}
+
+
+
+.screen-reader {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.dia-section {
+  background-color: #E3E6E8;
+  padding: 1rem;
+  border-radius: 5px;
+  border-top: 1px solid #E3E6E8;
+  border-bottom: 1px solid #E3E6E8;
+}
+
+.dia-section-no-sides {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.dia-section-no-padding {
+  padding: 0;
+}
+
+
+.padding-box {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+select {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  position: relative;
+  padding-right: 1.5rem;
+  display: block;
+  color: #666666;
+  font-weight: lighter;
+  border: 1px solid #E3E6E8;
+}
+
+figcaption {
+  font-size: 0.875rem;
+}
+
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.select-wrapper::after {
+  content: "";
+  position: absolute;
+  background: rgba(0,0,0,0) url("../assets/select-arrows.svg") no-repeat;
+  width: 1.5rem;
+  height: 100%;
+  right: 0;
+  top: 0;
+  height: 100%;
+  pointer-events: none;
+  background-size: 40%;
+  background-position: 50% 50%;
+}
+
+button {
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+
+
+.p-label {
+  color: #666666;
+  margin-bottom: 0.25rem;
+}
+
+
+.ftm-button {
+
+  padding: 6px 20px;
+
+  margin: 0;
+
+  margin-top: 0px;
+
+  text-align: center;
+
+  border-radius: 2px;
+
+  font-size: 0.875rem;
+
+  color: #292f32;
+
+  background-color: transparent;
+
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  border-top-color: rgba(0, 0, 0, 0.3);
+  border-right-color: rgba(0, 0, 0, 0.3);
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  border-left-color: rgba(0, 0, 0, 0.3);
+
+  display: inline-block;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.1em;
+
+  -webkit-appearance: none;
+
+  text-decoration: none;
+
+  vertical-align: middle;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+
+  user-select: none;
+
+  white-space: normal;
+
+  transition: background 0.1s ease-in-out;
+}
+
+
+.ftm-button-invert {
+  color: white;
+  background-color: #dd3230;
+  border-color: #dd3230;
+}
+
+.ftm-button-invert:hover {
+  background-color: #fff;
+  color: #dd3230;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+summary {
+  cursor: pointer;
+}
+
+#branding-container {
+  background-color: #292F32;
+  height: 6rem;
+  padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+  max-width: 1400px;
+  margin: auto;
+  box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  display: flex;
+  /* align-items: center; */
+  /* flex-direction: column; */
+  justify-content: space-between;
+  color: white;
+}
+
+
+#branding-container .branding-wrapper {
+  display: flex;
+  
+}
+
+#branding-container .branding-icon-wrapper {
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  border-radius: 3rem;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+}
+
+
+#branding-container .branding-icon {
+  height: 3rem;
+}
+
+
+#branding-container .branding-logo {
+  height: 3rem;
+  /* margin-right: 0.5rem; */
+}
+
+#branding-container .product-name {
+  font-weight: normal;
+}
+
+#branding-container .product-name h1 {
+  font-weight: bold;
+  margin:0;
+  font-size: 1.20rem;
+  margin-bottom: 0.4rem;
+}
+
+#branding-container .product-name h2 {
+  font-weight: inherit;
+  margin:0;
+  font-size: 1rem;
+}

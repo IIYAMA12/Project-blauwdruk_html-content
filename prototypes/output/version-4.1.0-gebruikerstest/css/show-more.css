@@ -1,0 +1,58 @@
+
+
+.show-more-button {
+  position: absolute;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  display: block;
+  bottom: -0.8rem;
+  left: calc(50% - 0.8rem);
+  padding: 0;
+}
+
+.show-more-button .options {
+  position: absolute;
+  bottom: 100%;
+  bottom: calc(100% + 0.1rem);
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+
+.show-more-button .button-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: rgba(0, 0, 0, 0) url("../assets/show-content.svg");
+  background-size: contain;
+  transition: transform 0.3s;
+  transform: rotate(0deg);
+}
+
+.show-more-container {
+  position: relative;
+  border-bottom: 2px solid #DD3230;
+}
+
+
+.show-more-container.open .show-more-button .show-more {
+  display: none;
+}
+
+
+.show-more-container:not(.open) .show-more-button .show-less {
+  display: none;
+}
+
+.show-more-container.open .show-more-button .button-icon {
+  transform: rotate(180deg);
+}
+
+.show-more-container:not(.open) .show-more-content {
+  display: none;
+}
